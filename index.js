@@ -82,7 +82,11 @@ function checkAnswer(currentLevel) {
     setTimeout(function(){
       $("body").removeClass("game-over");
     }, 200);
-    $("h1").html("Game Over, Press Any Key to Restart");
+    $("h1").html("Game Over, Press Any Key to Restartor </br> <button class='Start-by-click'> Click Here! </button>").click(function(){
+      resetGame();
+      nextSequence();
+      //Restart for phone
+    });
     resetGame();
   }
 }
